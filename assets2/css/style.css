@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:1,300,400,400italic,500,700,700italic,900');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+:root{
+
+    --main-color:#510841;
+    --primary-color: #a94c92;
+    --hover: #b03399;
+    --black:#2a201c;
+    --white:#fff;
+    --light-bg:#f3efec;
+    --dark-bg:rgba(0,0,0,.7);
+    --border:.1rem solid #aaa;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+}
+.heading{
+    text-align: center;
+    color:var(--primary-color);
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    margin-top: 4rem;
+ }
+  
+ 
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+ 
+html::-webkit-scrollbar{
+    width: .6rem;
+}
+ 
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+ 
+html::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+ 
+section{
+    padding: 5rem 7%;
+}
+ 
+.btn{
+   margin-top: 1rem;
+   display: inline-block;
+   background: var(--primary-color);
+   color:var(--white);
+   font-size: 2rem;
+   cursor: pointer;
+   padding:1rem 3rem;
+}
+ 
+.btn:hover{
+    background: var(--hover);
+}
+
+/* header */
+
+.header{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top:0; left:0; right: 0;
+    background: white;
+    z-index: 1000;
+}
+ 
+.header .logo{
+    font-size: 2rem;
+    font-weight: 500;
+    color:purple;
+    text-transform: capitalize;
+    font-family: "Kaushan Script", cursive;
+}
+
+.header .navbar #close-navbar {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+  }
+ 
+.header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color:var(--black);
+    text-transform: capitalize;
+}
+ 
+ .header .navbar a:hover{
+    padding-bottom: 0.5rem;
+    color:var(--primary-color);
+ }
+ 
+ #menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black);
+    display: none;
+ }
+.header .action-btn{
+    background-color: rgb(237, 183, 237);
+    color: #2a201c;
+    padding: 0.6rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+ /* header end */
+
+/* Global Stylings */
+.form-booking{
+    background:url(../img/pricing.jpg);
+
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 3rem 0 5rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    background-color: #39063f;
+    z-index: 1;
+  }
+  
+  .progress {
+    background-color: rgb(15, 3, 13);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 3.1875rem;
+    height: 3.1875rem;
+    background-color: #cd96cd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 10px;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  /* Form */
+  .form {
+    width: clamp(500px, 60%, 400px);
+    margin: 0 auto;
+    border: 1px solid #510606;
+    border-radius: 0.35rem;
+    padding: 2rem;
+    background-color: white;
+
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+    font-size: 1rem;
+  }
+
+.input-group select {
+    flex: 2;
+    width: 100%;
+    height: 3rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+.selectservice {
+    font-size: 1rem;
+}
+.input-group label{
+    flex: 1;
+    margin-right: 1rem;   
+}
+
+.input-payment {
+    display:flex;
+    color: #b03399;
+    
+  }
+  
+  .payment {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: auto;
+    gap: 10px;
+    margin-bottom: 10px; 
+    font-size: 15px ;
+  }
+ 
+  .btns-group {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment of buttons */
+    margin-top: 20px; /* Add spacing between payment options and buttons */
+  }
+/* Payment Details Styles */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  width: 150px;
+  display: inline-block;
+}
+.input-group span{
+  display: inline-block;
+  width: calc(50% - 100px); /* Adjust the width to accommodate the label */
+}
+#selected-service,
+#selected-price,
+#selected-firstname,
+#selected-lastname,
+#selected-phone,
+#selected-email,
+#selected-appointment-date,
+#selected-appointment-time {
+  font-size: 15px;
+  color: #666;
+
+
+}
+
+#selected-service {
+  font-style: italic;
+  color: #333;
+
+
+}
+
+#selected-price {
+  font-weight: bold;
+  color: rgb(203, 100, 26);
+
+}
+
+#selected-firstname,
+#selected-lastname {
+  text-transform: capitalize;
+}
+
+#selected-phone,
+#selected-email {
+  font-family: Arial, sans-serif;
+
+}
+
+#selected-appointment-date,
+#selected-appointment-time {
+  font-style: italic;
+
+}
+.inputBox img{
+  height: 34px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: violet;
+    color:#2a201c;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5rem;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgb(68, 4, 68);
+  }
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+     .header .navbar {
+        position: fixed;
+        top: 0;
+        right: -105%;
+        width: 30rem;
+        background: var(--white);
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        z-index: 1200;
+      }
+      .header .navbar #close-navbar {
+        display: block;
+      }
+      .header .navbar.active {
+        right: 0;
+      }
+      
+      .header .navbar a {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+    .home .content h3{
+        font-size: 5.5rem;
+    }
+
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+}
+@keyframes glow{
+    0%,100%{
+        color: white;
+        text-shadow: 0 0 12px rgb(42, 9, 20), 0 0 50px palevioletred, 0 0 100px palevioletred;
+    }
+    10%, 90%{
+        color: black;
+        text-shadow: none;
+    }
+}
